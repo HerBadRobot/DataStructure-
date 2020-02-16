@@ -17,6 +17,7 @@ class SingleLinkedList(object):
 
     def length(self):
         """获取链表的长度"""
+        
         cur = self.head
         count = 0
         while cur is not None:
@@ -26,6 +27,7 @@ class SingleLinkedList(object):
 
     def traversal(self):
         """遍历整个链表"""
+        
         cur = self.head
         while cur is not None:
             print(cur.data)
@@ -33,6 +35,7 @@ class SingleLinkedList(object):
 
     def search_node_is_exist(self, data):
         """查找指定结点是否存在"""
+        
         cur = self.head
         while cur is not None:
             if cur.data == data:
@@ -43,12 +46,14 @@ class SingleLinkedList(object):
 
     def add_fist(self, data):
         """在链表的头部添加元素"""
+        
         node = Node(data)
         node.next = self.head
         self.head = node
 
     def add_last(self, data):
         """在链表的尾部添加元素"""
+        
         node = Node(data)
         if self.is_empty():
             self.head = node
@@ -60,6 +65,7 @@ class SingleLinkedList(object):
 
     def insert_node(self, index, data):
         """在指定位置添加元素"""
+        
         node = Node(data)
         if index < 0 or index > self.length():
             return False
@@ -76,6 +82,7 @@ class SingleLinkedList(object):
 
     def remove_node(self, data):
         """删除指定结点"""
+        
         cur = self.head  # 指针指向的结点
         pre = None  # 指针指向结点的前一个
         if self.head == data:
